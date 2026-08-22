@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Analytics Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar-header">
+            <h1 class="logo-title">MarketPro</h1>
+            <img class="hamburger" id="hamburgerBtn" src="./assets/hamburger.png" alt="Menu">
+        </div>
+        
+        <div class="sidebar">
+            <h3 class="active">📊 Dashboard</h3>
+            <h3>📢 Campaigns</h3>
+            <h3>📈 Reports</h3>
+            <h3>⚙ Settings</h3>
+        </div>
+    </div>
+
+    <div class="compaign-box">
+        <div class="campaign-analytics">
+            <h1>Campaign Analytics Dashboard</h1>
+            <div class="header-actions">
+                <button id="themeToggleBtn" class="theme-btn">🌙 Dark Mode</button>
+                <div class="user">
+                    <p>👤 Muskan</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card1">
+                <h3>📢 Total</h3> 
+                <h1>24</h1>
+            </div>
+            <div class="card2">
+                <h3>👀 Impressions</h3>
+                <h1>1,20,000</h1>
+            </div>
+            <div class="card3">
+                <h3>🎯 Conversions</h3>
+                <h1>685</h1>
+            </div>
+            <div class="card4">
+                <h3>💰 ROI</h3>
+                <h1>210%</h1>
+            </div>
+        </div>
+         
+        <div class="chart-grid">
+            <div class="box">
+                <h3>Channel Performance</h3>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="box">
+                <h3>Traffic Share</h3>
+                <canvas id="doughnutChart"></canvas>
+            </div>
+        </div>
+
+        <div class="filter-controls">
+            <select class="dropdown" id="timeFilter">
+                <option value="">Select</option>
+                <option value="7days">Last 7 days</option>
+                <option value="30days">Last 30 days</option>
+                <option value="month">This Month</option>
+            </select>
+
+            <select class="dropdown" id="attributionFilter">
+                <option value="lastTouch">Last Touch</option>
+                <option value="firstTouch">First Touch</option>
+                <option value="linear">Linear</option>
+            </select>
+        </div>
+
+        <div class="funnel-container">
+            <h2>Conversion Funnel</h2>
+
+            <div class="funnel-step">
+                <div class="funnel-info">
+                    <span>👀 Impressions</span>
+                    <span id="impressionValue">1,20,000 (100%)</span>
+                </div>
+                <div class="funnel-bar-bg">
+                    <div class="funnel-bar-fill impressions" id="impressionBar"></div>
+                </div>
+            </div>
+
+            <div class="funnel-step">
+                <div class="funnel-info">
+                    <span>🖱️ Clicks</span>
+                    <span id="clickValue">12,000 (10%)</span>
+                </div>
+                <div class="funnel-bar-bg">
+                    <div class="funnel-bar-fill clicks" id="clickBar"></div>
+                </div>
+            </div>
+
+            <div class="funnel-step">
+                <div class="funnel-info">
+                    <span>🎯 Conversions</span>
+                    <span id="conversionValue">685 (0.57%)</span>
+                </div>
+                <div class="funnel-bar-bg">
+                    <div class="funnel-bar-fill conversions" id="conversionBar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h2>Campaign Performance Breakdown</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Clicks</th>
+                        <th>Conversions</th>
+                        <th>Conv. Rate (%)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google Organic</td>
+                        <td>1,200</td>
+                        <td>150</td>
+                        <td>12.5%</td>
+                        <td><span class="badge active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Instagram Ads</td>
+                        <td>3,400</td>
+                        <td>320</td>
+                        <td>9.4%</td>
+                        <td><span class="badge active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Telegram</td>
+                        <td>800</td>
+                        <td>40</td>
+                        <td>5.0%</td>
+                        <td><span class="badge paused">Paused</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

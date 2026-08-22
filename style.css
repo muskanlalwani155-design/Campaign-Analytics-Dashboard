@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    gap: 20px;
+    background-color: #F8FAFC;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container {
+    height: 100vh;
+    padding-top: 20px;
+    width: 260px;
+    min-width: 260px;
+    padding-left: 25px;
+    padding-right: 15px;
+    background: linear-gradient(180deg, #EC4899, #8B5CF6);
+    color: white;
+    transition: all 0.3s ease;
+    border: 2px solid black;
+    height: 1400px;
+}
+
+.container.collapsed {
+    width: 70px;
+    min-width: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container.collapsed .logo-title,
+.container.collapsed .sidebar {
+    display: none;
+}
+
+.compaign-box {
+    flex: 1;
+    max-width: calc(100% - 280px);
+    padding: 20px 25px 40px 0;
+    border: none; 
+}
+
+.campaign-analytics {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    height: auto;
+}
+
+.cards div {
+    flex: 1;
+    margin-top: 15px;
+    height: auto;
+    width: auto;
+    background-color: white;
+    padding: 16px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.funnel-container,
+.table-container {
+    width: 100%;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sidebar-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.container img.hamburger {
+    display: block; 
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+}
+
+.sidebar {
+    margin-top: 40px;
+}
+
+.sidebar h3 {
+    margin-top: 10px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.sidebar h3:hover {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.sidebar h3.active {
+    background: white;
+    color: #8B5CF6;
+}
+
+
+.container.collapsed {
+    width: 75px;
+    padding: 25px 15px;
+}
+
+.container.collapsed .sidebar-header {
+    justify-content: center;
+}
+
+.container.collapsed .logo-title,
+.container.collapsed .sidebar {
+    display: none;
+}
+
+.compaign-box {
+    flex: 1;
+    padding: 25px 30px 40px 0;
+}
+
+.campaign-analytics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-btn {
+    padding: 10px 16px;
+    background-color: white;
+    color: #0F172A;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: #F1F5F9;
+}
+
+.user {
+    padding: 10px 16px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.cards div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cards div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card1 { border-top: 5px solid #EC4899; }
+.card2 { border-top: 5px solid #8B5CF6; }
+.card3 { border-top: 5px solid #06B6D4; }
+.card4 { border-top: 5px solid #F59E0B; }
+
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    height: 340px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.filter-controls {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0 25px 0;
+}
+
+.dropdown {
+    padding: 10px 15px;
+    font-weight: 600;
+    background-color: #8B5CF6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+.funnel-container {
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    margin-bottom: 25px;
+}
+
+.funnel-container h2 {
+    font-size: 18px;
+    color: #0F172A;
+    margin-bottom: 20px;
+}
+
+.funnel-step { margin-bottom: 18px; }
+
+.funnel-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+.funnel-bar-bg {
+    width: 100%;
+    height: 14px;
+    background-color: #F1F5F9;
+    border-radius: 20px;
+    overflow: hidden; 
+}
+
+.funnel-bar-fill {
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.6s ease-in-out; 
+}
+
+.funnel-bar-fill.impressions {
+    width: 100%;
+    background: linear-gradient(90deg, #EC4899, #F43F5E);
+}
+
+.funnel-bar-fill.clicks {
+    width: 35%; 
+    background: linear-gradient(90deg, #8B5CF6, #A855F7);
+}
+
+.funnel-bar-fill.conversions {
+    width: 12%; 
+    background: linear-gradient(90deg, #06B6D4, #0EA5E9);
+}
+
+
+.table-container {
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.table-container h2 {
+    font-size: 18px;
+    color: #0F172A;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #F8FAFC;
+    color: #64748B;
+    font-weight: 600;
+    padding: 12px 16px;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+td {
+    padding: 14px 16px;
+    color: #334155;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+tbody tr:hover { background-color: #F8FAFC; }
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge.active {
+    background-color: #DCFCE7;
+    color: #166534;
+}
+
+.badge.paused {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}
+
+body.dark-mode {
+    background-color: #0F172A;
+    color: #F8FAFC;
+}
+
+body.dark-mode .user,
+body.dark-mode .theme-btn,
+body.dark-mode .cards div,
+body.dark-mode .box,
+body.dark-mode .funnel-container,
+body.dark-mode .table-container {
+    background-color: #1E293B;
+    color: #F8FAFC;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .theme-btn {
+    border-color: #334155;
+}
+
+body.dark-mode .funnel-container h2,
+body.dark-mode .table-container h2,
+body.dark-mode .funnel-info,
+body.dark-mode th,
+body.dark-mode td {
+    color: #F8FAFC;
+}
+
+body.dark-mode th {
+    background-color: #1E293B;
+    border-bottom: 2px solid #334155;
+}
+
+body.dark-mode td {
+    border-bottom: 1px solid #334155;
+}
+
+body.dark-mode tbody tr:hover { 
+    background-color: #283548; 
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    height: 350px;
+    overflow: hidden; 
+}
+
+
+
+
+
+
+/* =========================================================
+   RESPONSIVE DESIGN (Tablets & Mobile Screens)
+   ========================================================= */
+
+
+@media screen and (max-width: 1024px) {
+    body {
+        gap: 15px;
+    }
+
+    .compaign-box {
+        padding: 20px 20px 30px 0;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        height: 320px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        gap: 0;
+        overflow-x: hidden;
+    }
+
+    
+    .container {
+        height: auto;
+        min-height: auto;
+        width: 100%;
+        min-width: 100%;
+        padding: 16px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar-header {
+        justify-content: space-between;
+    }
+
+    
+    .sidebar {
+        display: none;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .container.collapsed .sidebar {
+        display: block;
+    }
+
+    .container.collapsed .logo-title {
+        display: block;
+    }
+
+    .container.collapsed {
+        width: 100%;
+        min-width: 100%;
+        padding: 16px 20px;
+    }
+
+    .sidebar h3 {
+        width: 100%;
+    }
+
+    
+    .compaign-box {
+        max-width: 100%;
+        padding: 20px 15px 40px 15px;
+    }
+
+    .campaign-analytics {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .campaign-analytics h1 {
+        font-size: 20px;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    
+    .chart-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .box {
+        height: 300px;
+        padding: 15px;
+    }
+
+    
+    .filter-controls {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    
+    .funnel-container,
+    .table-container {
+        padding: 18px 15px;
+        border-radius: 12px;
+    }
+
+    
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 550px;
+    }
+}
