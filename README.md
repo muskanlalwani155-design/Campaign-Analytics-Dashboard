@@ -4,7 +4,12 @@ An interactive, responsive marketing analytics dashboard engineered with pure Ja
 
 ---
 
-## Tech Stack
+**Live Demo:** [View Live Dashboard](https://muskanlalwani155-design.github.io/Campaign-Analytics-Dashboard/)  
+**Source Code:** [GitHub Repository](https://github.com/muskanlalwani155-design/Campaign-Analytics-Dashboard)
+
+---
+
+##  Tech Stack
 
 * **Markup & Structure:** HTML5 (Semantic elements)
 * **Styling & Layout:** CSS3 (Flexbox, CSS Grid, Custom Variables, Media Queries)
@@ -14,7 +19,7 @@ An interactive, responsive marketing analytics dashboard engineered with pure Ja
 
 ---
 
-## Features
+##  Features
 
 * **Multi-Channel Performance Tracking:** Displays campaign metrics including impressions, CTR, conversion rates, and total ad spend across channels.
 * **Interactive Data Visualization:** Dynamic visual charts reflecting attribution shifts and trend comparisons over time.
@@ -24,7 +29,7 @@ An interactive, responsive marketing analytics dashboard engineered with pure Ja
 
 ---
 
-## Project Structure
+##  Project Structure
 
 ```text
 Campaign-Analytics-Dashboard/
